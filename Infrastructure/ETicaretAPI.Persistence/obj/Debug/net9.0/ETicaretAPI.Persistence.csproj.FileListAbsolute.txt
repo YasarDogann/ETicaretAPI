@@ -17,3 +17,4 @@ D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\obj\Deb
 D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\obj\Debug\net9.0\ref\ETicaretAPI.Persistence.dll
 D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\bin\Debug\net9.0\ETicaretAPI.Persistence.runtimeconfig.json
 D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\obj\Debug\net9.0\ETicaretAPI.Persistence.genruntimeconfig.cache
+D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Persistence\obj\Debug\net9.0\ETicaretAPI.Persistence.sourcelink.json

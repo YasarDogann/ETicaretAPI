@@ -13,3 +13,4 @@ D:\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net9.0\
 D:\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net9.0\refint\ETicaretAPI.Application.dll
 D:\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net9.0\ETicaretAPI.Application.pdb
 D:\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net9.0\ref\ETicaretAPI.Application.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Core\ETicaretAPI.Application\obj\Debug\net9.0\ETicaretAPI.Application.sourcelink.json

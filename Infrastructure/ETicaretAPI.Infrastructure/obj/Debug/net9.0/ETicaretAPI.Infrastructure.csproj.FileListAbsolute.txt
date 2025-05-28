@@ -15,3 +15,4 @@ D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Infrastructure\obj\
 D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Infrastructure\obj\Debug\net9.0\refint\ETicaretAPI.Infrastructure.dll
 D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Infrastructure\obj\Debug\net9.0\ETicaretAPI.Infrastructure.pdb
 D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Infrastructure\obj\Debug\net9.0\ref\ETicaretAPI.Infrastructure.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Infrastructure\ETicaretAPI.Infrastructure\obj\Debug\net9.0\ETicaretAPI.Infrastructure.sourcelink.json
