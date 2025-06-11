@@ -20,7 +20,6 @@ D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.AssemblyInfoInputs.cache
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.AssemblyInfo.cs
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.csproj.CoreCompileInputs.cache
-D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.MvcApplicationPartsAssemblyInfo.cs
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.MvcApplicationPartsAssemblyInfo.cache
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\scopedcss\bundle\ETicaretAPI.API.styles.css
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\staticwebassets.build.json
@@ -148,3 +147,4 @@ D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\ETicaretAPI.Infrastructure.pdb
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.sourcelink.json
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\ETicaretAPI.API.staticwebassets.runtime.json

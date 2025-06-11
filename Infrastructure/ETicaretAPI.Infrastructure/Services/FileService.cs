@@ -89,8 +89,7 @@ namespace ETicaretAPI.Infrastructure.Services
 
         public async Task<List<(string fileName, string path)>> UploadAsync(string path, IFormFileCollection files)
         {
-            string uploadPath = Path.Combine
-                (_webHostEnvironment.WebRootPath, path);
+            string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, path);
 
             if(!Directory.Exists(uploadPath))
                 Directory.CreateDirectory(uploadPath);
@@ -103,7 +102,7 @@ namespace ETicaretAPI.Infrastructure.Services
                 string fileNewName = await FileRenameAsync(uploadPath,file.FileName);
 
                 bool result = await CopyFileAsync($"{uploadPath}\\{fileNewName}", file);
-                datas.Add((fileNewName, $"{uploadPath}\\{fileNewName}"));
+                datas.Add((fileNewName, $"{path}\\{fileNewName}"));
                 results.Add(result);
             }
 
