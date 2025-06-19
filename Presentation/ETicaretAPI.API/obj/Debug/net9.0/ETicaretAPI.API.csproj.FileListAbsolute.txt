@@ -148,3 +148,10 @@ D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.pdb
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.genruntimeconfig.cache
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ref\ETicaretAPI.API.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\Azure.Core.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\Azure.Storage.Blobs.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\Azure.Storage.Common.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\System.ClientModel.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\System.IO.Hashing.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\System.Memory.Data.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.MvcApplicationPartsAssemblyInfo.cs

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2KefRRuw52DJs+jjLg2t2e0y7OdjKZgfrcuy+zviBGI=",
+  "Hash": "T6FYLd62qIbEIjEDtwlm1ZccpnW3X9vB2ACnIdqtgDk=",
   "Source": "ETicaretAPI.API",
   "BasePath": "_content/ETicaretAPI.API",
   "Mode": "Default",
@@ -15,6 +15,111 @@
       "Pattern": "**"
     }
   ],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": [
+    {
+      "Identity": "D:\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\ben.jpg",
+      "SourceId": "ETicaretAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.API",
+      "RelativePath": "resource/files/ben#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9au4lscekr",
+      "Integrity": "UdfDXvKn9pdPu+eG9G2jwsAY3l6RZ8kW5/c6CMZU27A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\files\\ben.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "resource/files/ben.9au4lscekr.jpg",
+      "AssetFile": "D:\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\ben.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "379680"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UdfDXvKn9pdPu+eG9G2jwsAY3l6RZ8kW5/c6CMZU27A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 14:36:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9au4lscekr"
+        },
+        {
+          "Name": "label",
+          "Value": "resource/files/ben.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UdfDXvKn9pdPu+eG9G2jwsAY3l6RZ8kW5/c6CMZU27A="
+        }
+      ]
+    },
+    {
+      "Route": "resource/files/ben.jpg",
+      "AssetFile": "D:\\ETicaretUygulamasi\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\files\\ben.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "379680"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UdfDXvKn9pdPu+eG9G2jwsAY3l6RZ8kW5/c6CMZU27A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 14:36:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UdfDXvKn9pdPu+eG9G2jwsAY3l6RZ8kW5/c6CMZU27A="
+        }
+      ]
+    }
+  ]
 }
