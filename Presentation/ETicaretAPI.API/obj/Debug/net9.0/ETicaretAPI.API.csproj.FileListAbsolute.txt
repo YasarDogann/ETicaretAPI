@@ -154,3 +154,6 @@ D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\System.IO.Hashing.dll
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\System.Memory.Data.dll
 D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.MvcApplicationPartsAssemblyInfo.cs
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\MediatR.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\MediatR.Contracts.dll
+D:\ETicaretUygulamasi\ETicaretAPI\Presentation\ETicaretAPI.API\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

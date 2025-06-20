@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "cR8ULl4jSx0=",
+  "dgSpecHash": "14zha8lqLTw=",
   "success": true,
   "projectFilePath": "D:\\ETicaretUygulamasi\\ETicaretAPI\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yasar\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\yasar\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\yasar\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "C:\\Users\\yasar\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\yasar\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\yasar\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\yasar\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.3\\microsoft.entityframeworkcore.9.0.3.nupkg.sha512",
     "C:\\Users\\yasar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.3\\microsoft.entityframeworkcore.abstractions.9.0.3.nupkg.sha512",
     "C:\\Users\\yasar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.3\\microsoft.entityframeworkcore.analyzers.9.0.3.nupkg.sha512",
