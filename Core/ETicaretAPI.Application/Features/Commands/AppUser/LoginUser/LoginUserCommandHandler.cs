@@ -29,4 +29,4 @@ namespace ETicaretAPI.Application.Features.Commands.AppUser.LoginUser
             };
         }
     }
-}
+} 
