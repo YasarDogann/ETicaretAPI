@@ -30,7 +30,7 @@
     "Parameters": [
       {
         "Name": "createProductCommandRequest",
-        "Type": "ETicaretAPI.Application.Features.Commands.CreateProduct.CreateProductCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.Product.CreateProduct.CreateProductCommandRequest",
         "IsRequired": true
       }
     ],
@@ -45,9 +45,24 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "ETicaretAPI.Application.ViewModels.Products.VM_Update_Product",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Stock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Single",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -55,7 +70,7 @@
   {
     "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
     "Method": "Get",
-    "RelativePath": "api/Products/{id}",
+    "RelativePath": "api/Products/{Id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -71,13 +86,13 @@
   {
     "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
     "Method": "Delete",
-    "RelativePath": "api/Products/{id}",
+    "RelativePath": "api/Products/{Id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Id",
         "Type": "System.String",
         "IsRequired": true
       }
@@ -93,7 +108,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Id",
         "Type": "System.String",
         "IsRequired": true
       },
@@ -114,7 +129,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Id",
         "Type": "System.String",
         "IsRequired": true
       }
@@ -130,8 +145,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Id",
         "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Files",
+        "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
         "IsRequired": false
       }
     ],
