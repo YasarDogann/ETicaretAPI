@@ -30,12 +30,6 @@ namespace ETicaretAPI.Application.Features.Commands.AppUser.FacebookLogin
                 Token = token
             };
 
-            /*
-             string accessTokenResponse = await _httpClient.GetStringAsync($"https://graph.facebook.com/oauth/access_token
-                ?client_id=1660242901349879
-                &client_secret=06dbdeae25621987593c81048b7b1a10
-                &grant_type=client_credentials") ;
-             */
         }
     }
 }
