@@ -2235,7 +2235,6 @@
         "dependencies": {
           "ETicaretAPI.Domain": "1.0.0",
           "FluentValidation.AspNetCore": "11.3.0",
-          "Google.Apis.Auth": "1.70.0",
           "MediatR": "11.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.3"
@@ -2282,6 +2281,7 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "ETicaretAPI.Application": "1.0.0",
+          "Google.Apis.Auth": "1.70.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
           "Microsoft.Extensions.Configuration": "9.0.3",
           "Microsoft.Extensions.Configuration.Json": "9.0.3",

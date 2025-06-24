@@ -29,9 +29,7 @@ namespace ETicaretAPI.Application.Features.Commands.AppUser.CreateUser
             {
                 Message = response.Message,
                 Succeeded = response.Succeeded,
-            };
-
-            //throw new UserCreateFailedException();
+            }; 
         }
     }
 }
