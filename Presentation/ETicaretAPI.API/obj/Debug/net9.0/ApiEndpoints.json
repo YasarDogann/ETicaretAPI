@@ -1,5 +1,69 @@
 [
   {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "FacebookLogin",
+    "RelativePath": "api/Auth/facebook-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "facebookLoginCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.FacebookLogin.FacebookLoginCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "GoogleLogin",
+    "RelativePath": "api/Auth/google-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "googleLoginCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.GoogleLogin.GoogleLoginCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUserCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthController",
+    "Method": "RefreshTokenLogin",
+    "RelativePath": "api/Auth/RefreshTokenLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshTokenLoginCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.RefreshTokenLogin.RefreshTokenLoginCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
     "Method": "Get",
     "RelativePath": "api/Products",
@@ -153,6 +217,22 @@
         "Name": "Files",
         "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.UsersController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUserCommandRequest",
+        "Type": "ETicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
