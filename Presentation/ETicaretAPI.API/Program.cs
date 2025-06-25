@@ -11,6 +11,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
+using Serilog;
+using NpgsqlTypes;
+using Serilog.Sinks.PostgreSQL;
+using Serilog.Core;
+using ETicaretAPI.API.Configurations.ColumnWriters;
+using Serilog.Context;
+using Microsoft.AspNetCore.HttpLogging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +44,37 @@ builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
 //builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
 //    .AddFluentValidation(conf => conf.RegisterValidatorsFromAssemblyContaining<CreateProductValidator>())
 //    .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
+
+// SERÝLOG ÝLE LOGLAMA ÝÞLEMÝ
+Logger log = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log.txt")
+    .WriteTo.PostgreSQL(builder.Configuration.GetConnectionString("PostgreSQL"), "logs",
+        needAutoCreateTable: true,
+        columnOptions: new Dictionary<string, ColumnWriterBase>
+        {
+            {"message", new RenderedMessageColumnWriter(NpgsqlDbType.Text)},
+            {"message_template", new MessageTemplateColumnWriter(NpgsqlDbType.Text)},
+            {"level", new LevelColumnWriter(true , NpgsqlDbType.Varchar)},
+            {"time_stamp", new TimestampColumnWriter(NpgsqlDbType.Timestamp)},
+            {"exception", new ExceptionColumnWriter(NpgsqlDbType.Text)},
+            {"log_event", new LogEventSerializedColumnWriter(NpgsqlDbType.Json)},
+            {"user_name", new UsernameColumnWriter()}
+        })
+    .WriteTo.Seq(builder.Configuration["Seq:ServerURL"])
+    .Enrich.FromLogContext()
+    .MinimumLevel.Information()
+    .CreateLogger();
+builder.Host.UseSerilog();
+
+builder.Services.AddHttpLogging(logging =>
+{
+    logging.LoggingFields = HttpLoggingFields.All;
+    logging.RequestHeaders.Add("sec-ch-ua");
+    logging.MediaTypeOptions.AddText("application/javascript");
+    logging.RequestBodyLogLimit = 4096;
+    logging.ResponseBodyLogLimit = 4096;
+});
 
 builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
 
@@ -79,11 +117,20 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles();
+
+app.UseSerilogRequestLogging();
+app.UseHttpLogging();
 app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.Use(async (context, next) =>
+{
+    var username = context.User?.Identity?.IsAuthenticated != null || true ? context.User.Identity.Name : null;
+    LogContext.PushProperty("user_name", username);
+    await next();
+});
 
 app.MapControllers();
 
