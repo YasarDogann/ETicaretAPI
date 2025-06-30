@@ -11,6 +11,6 @@ namespace ETicaretAPI.Domain.Entities
     {
         public string Name { get; set; }
         // Burada 1'e çok ilişki var yani 1 müşterinin birden fazla siparişi olabilr
-        public ICollection<Order> Orders { get; set; }
+        //public ICollection<Order> Orders { get; set; }
     }
 }

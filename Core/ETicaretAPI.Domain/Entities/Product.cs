@@ -14,7 +14,7 @@ namespace ETicaretAPI.Domain.Entities
         public float Price { get; set; }
 
         // Çoka çok ilişki için
-        public ICollection<Order> Orders { get; set; }
+        //public ICollection<Order> Orders { get; set; }
         // 1 ürünün 1'den fazla fotografı olabilir
         public ICollection<ProductImageFile> ProductImageFiles { get; set; }
         public ICollection<BasketItem> BasketItems { get; set; }
