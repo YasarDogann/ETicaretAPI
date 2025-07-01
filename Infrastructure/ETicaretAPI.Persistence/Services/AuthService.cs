@@ -3,15 +3,16 @@ using ETicaretAPI.Application.Abstractions.Token;
 using ETicaretAPI.Application.DTOs;
 using ETicaretAPI.Application.DTOs.Facebook;
 using ETicaretAPI.Application.Exceptions;
+using ETicaretAPI.Application.Helpers;
 using ETicaretAPI.Domain.Entities.Identity;
 using Google.Apis.Auth;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -26,14 +27,14 @@ namespace ETicaretAPI.Persistence.Services
         readonly ITokenHandler _tokenHandler;
         readonly SignInManager<Domain.Entities.Identity.AppUser> _signInManager;
         readonly IUserService _userService;
-        //readonly IMailService _mailService;
+        readonly IMailService _mailService;
         public AuthService(IHttpClientFactory httpClientFactory,
             IConfiguration configuration,
             UserManager<Domain.Entities.Identity.AppUser> userManager,
             ITokenHandler tokenHandler,
             SignInManager<AppUser> signInManager,
-            IUserService userService
-            /*IMailService mailService*/)
+            IUserService userService,
+            IMailService mailService)
         {
             _httpClient = httpClientFactory.CreateClient();
             _configuration = configuration;
@@ -41,9 +42,8 @@ namespace ETicaretAPI.Persistence.Services
             _tokenHandler = tokenHandler;
             _signInManager = signInManager;
             _userService = userService;
-            //_mailService = mailService;
+            _mailService = mailService;
         }
-
         async Task<Token> CreateUserExternalAsync(AppUser user, string email, string name, UserLoginInfo info, int accessTokenLifeTime)
         {
             bool result = user != null;
@@ -97,7 +97,6 @@ namespace ETicaretAPI.Persistence.Services
             }
             throw new Exception("Invalid external authentication.");
         }
-
         public async Task<Token> GoogleLoginAsync(string idToken, int accessTokenLifeTime)
         {
             var settings = new GoogleJsonWebSignature.ValidationSettings()
@@ -132,11 +131,6 @@ namespace ETicaretAPI.Persistence.Services
             throw new AuthenticationErrorException();
         }
 
-        public Task PasswordResetAsnyc(string email)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<Token> RefreshTokenLoginAsync(string refreshToken)
         {
             AppUser? user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
@@ -150,9 +144,29 @@ namespace ETicaretAPI.Persistence.Services
                 throw new NotFoundUserException();
         }
 
-        public Task<bool> VerifyResetTokenAsync(string resetToken, string userId)
+        public async Task PasswordResetAsnyc(string email)
         {
-            throw new NotImplementedException();
+            AppUser user = await _userManager.FindByEmailAsync(email);
+            if (user != null)
+            {
+                string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                resetToken = resetToken.UrlEncode();
+
+                await _mailService.SendPasswordResetMailAsync(email, user.Id, resetToken);
+            }
+        }
+
+        public async Task<bool> VerifyResetTokenAsync(string resetToken, string userId)
+        {
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                resetToken = resetToken.UrlDecode();
+
+                return await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", resetToken);
+            }
+            return false;
         }
     }
 }
