@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ETicaretAPI.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ab28418120619b4300df924e0674767caa08559")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9acf05e21c86dc42230d0a61cd61ab963a252f4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ETicaretAPI.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ETicaretAPI.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
