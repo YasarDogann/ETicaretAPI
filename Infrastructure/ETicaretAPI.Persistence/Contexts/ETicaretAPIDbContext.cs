@@ -11,22 +11,22 @@ using System.Threading.Tasks;
 
 namespace ETicaretAPI.Persistence.Contexts
 {
-    public class ETicaretAPIDbContext : IdentityDbContext<AppUser,AppRole, string>
+    public class ETicaretAPIDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
         public ETicaretAPIDbContext(DbContextOptions options) : base(options)
-        {}
+        { }
 
-        // veri tabanında taboları olşturuyoruz
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        // tph
         public DbSet<Domain.Entities.File> Files { get; set; }
         public DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public DbSet<InvoiceFile> InvoiceFiles { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<CompletedOrder> CompletedOrders { get; set; }
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<Endpoint> Endpoints { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>()
@@ -51,10 +51,10 @@ namespace ETicaretAPI.Persistence.Contexts
         }
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            // ChangeTracker : entityler üzerinden ypılan değişikliklerin yada yeni eklenen verinin yakalanmasını sağlayan property'dir. Update operasyonlarında track edilen verileri yakalayıp elde etmemizi sağlar.
+            //ChangeTracker : Entityler üzerinden yapılan değişiklerin ya da yeni eklenen verinin yakalanmasını sağlayan propertydir. Update operasyonlarında Track edilen verileri yakalayıp elde etmemizi sağlar.
 
             var datas = ChangeTracker
-                .Entries<BaseEntity>();
+                 .Entries<BaseEntity>();
 
             foreach (var data in datas)
             {
