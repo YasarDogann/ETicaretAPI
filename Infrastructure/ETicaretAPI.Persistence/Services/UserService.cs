@@ -72,7 +72,7 @@ namespace ETicaretAPI.Persistence.Services
                     throw new PasswordChangeFailedException();
             }
         }
-        /*
+        
         public async Task<List<ListUser>> GetAllUsersAsync(int page, int size)
         {
             var users = await _userManager.Users
@@ -90,9 +90,9 @@ namespace ETicaretAPI.Persistence.Services
 
             }).ToList();
         }
-
+        
         public int TotalUsersCount => _userManager.Users.Count();
-
+        
         public async Task AssignRoleToUserAsnyc(string userId, string[] roles)
         {
             AppUser user = await _userManager.FindByIdAsync(userId);
@@ -104,6 +104,7 @@ namespace ETicaretAPI.Persistence.Services
                 await _userManager.AddToRolesAsync(user, roles);
             }
         }
+        
         public async Task<string[]> GetRolesToUserAsync(string userIdOrName)
         {
             AppUser user = await _userManager.FindByIdAsync(userIdOrName);
@@ -117,7 +118,7 @@ namespace ETicaretAPI.Persistence.Services
             }
             return new string[] { };
         }
-
+        /*
         public async Task<bool> HasRolePermissionToEndpointAsync(string name, string code)
         {
             var userRoles = await GetRolesToUserAsync(name);
