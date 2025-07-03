@@ -118,7 +118,7 @@ namespace ETicaretAPI.Persistence.Services
             }
             return new string[] { };
         }
-        /*
+        
         public async Task<bool> HasRolePermissionToEndpointAsync(string name, string code)
         {
             var userRoles = await GetRolesToUserAsync(name);
@@ -161,6 +161,6 @@ namespace ETicaretAPI.Persistence.Services
             }
 
             return false;
-        }*/
+        }
     }
 }

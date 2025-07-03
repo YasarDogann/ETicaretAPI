@@ -20,6 +20,7 @@ using Serilog.Context;
 using Microsoft.AspNetCore.HttpLogging;
 using ETicaretAPI.API.Extensions;
 using ETicaretAPI.SignalR;
+using ETicaretAPI.API.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -84,9 +85,11 @@ builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsi
 
 builder.Services.AddValidatorsFromAssemblyContaining<CreateProductValidator>();
 
-builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
-
-    .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
+builder.Services.AddControllers(options => 
+{
+    options.Filters.Add<ValidationFilter>();
+    options.Filters.Add<RolePermissionFilter>();
+}).ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
 
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
