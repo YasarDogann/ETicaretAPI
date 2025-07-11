@@ -34,3 +34,69 @@ Proje **Onion Architecture** temelinde yapılandırılmıştır. Katmanlar aras�
   ├── 📁 <strong>Persistence</strong> → Repository, UnitOfWork, Event Sourcing Bazlı Yapı 
   ├── 📁 <strong>WebApi</strong> → Controller'lar, Middlewares, JWT, CORS 
   └── 📁 <strong>Shared</strong> → Ortak Servisler, Response Modelleri, Constants </pre>
+
+---
+
+## 🔐 Kimlik Doğrulama & Yetkilendirme
+
+- **JWT Bearer Token Authentication**
+- **Google ve Facebook Login** desteği (OAuth2)
+- **Rol Tabanlı Yetkilendirme (RBAC)**
+- **Claim Tabanlı Yetkilendirme**
+
+---
+
+## 📦 Dosya & Depolama Yönetimi
+
+- Uygulama içi dosya yüklemeleri hem **Local** hem de **Azure Blob Storage** üzerinde yönetilebilir.
+- Yapı, gelecekte diğer cloud servisleri (AWS S3, Google Cloud Storage) ile entegre edilebilir.
+
+---
+
+## 🔄 CQRS & Mediator Pattern
+
+- **Command / Query** ayrımı ile iş yükü yönetimi sağlandı.
+- **MediatR** entegrasyonu ile loosely coupled bir yapı kuruldu.
+- **Event Sourcing** temelleri `Repository` katmanında hazırlandı.
+
+---
+
+## 📡 SignalR Entegrasyonu
+
+- **SignalR** çoklu hub destekleyen yapı ile entegre edildi.
+- Angular tarafında özel **Custom SignalR Service** geliştirildi.
+- Gerçek zamanlı bildirim, sipariş durumu güncellemesi, stok değişiklikleri gibi işlemler desteklenmektedir.
+
+---
+
+## 📩 Mail Servisi
+
+- E-posta gönderimleri için özelleştirilebilir yapı.
+- SMTP tabanlı veya dış servislerle çalışabilecek esneklik.
+
+---
+
+## 🧾 QR Code Özellikleri
+
+- Ürünler için **QRCode** üretildi.
+- **QRCode okutularak stok güncellemesi** yapılabilir hale getirildi.
+
+---
+
+## ✅ Diğer Özellikler
+
+- **Fluent Validation** ile model doğrulama
+- **CORS Politikaları** ile güvenli erişim kontrolü
+- **Serilog** ile detaylı loglama
+- **Seq** entegrasyonu ile log görselleştirmesi
+
+---
+
+## 🛠️ Kurulum (Docker + PostgreSQL)
+
+- iletişime geçilirse yardımcı olunacak.
+
+## NOT
+- appsettings.json paylaşılmadı.
+- Azure'da Client ve Api yayınlanmadı. Şuan localde çalışır vaziyette. Todo olarak eklendi.
+
