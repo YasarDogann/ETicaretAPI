@@ -27,4 +27,10 @@ Proje **Onion Architecture** temelinde yapılandırılmıştır. Katmanlar aras�
 
 ---
 
-<pre lang="markdown"> 📦 <strong>ECommerceApi</strong> ├── 📁 <strong>Application</strong> → CQRS, MediatR, DTO'lar, Validations ├── 📁 <strong>Domain</strong> → Entity Sınıfları, Enumlar, Arayüzler ├── 📁 <strong>Infrastructure</strong> → PostgreSQL, Serilog, Azure Blob, Mail, SignalR ├── 📁 <strong>Persistence</strong> → Repository, UnitOfWork, Event Sourcing Bazlı Yapı ├── 📁 <strong>WebApi</strong> → Controller'lar, Middlewares, JWT, CORS └── 📁 <strong>Shared</strong> → Ortak Servisler, Response Modelleri, Constants </pre>
+<pre lang="markdown"> 📦 <strong>ECommerceApi</strong> 
+  ├── 📁 <strong>Application</strong> → CQRS, MediatR, DTO'lar, Validations 
+  ├── 📁 <strong>Domain</strong> → Entity Sınıfları, Enumlar, Arayüzler 
+  ├── 📁 <strong>Infrastructure</strong> → PostgreSQL, Serilog, Azure Blob, Mail, SignalR 
+  ├── 📁 <strong>Persistence</strong> → Repository, UnitOfWork, Event Sourcing Bazlı Yapı 
+  ├── 📁 <strong>WebApi</strong> → Controller'lar, Middlewares, JWT, CORS 
+  └── 📁 <strong>Shared</strong> → Ortak Servisler, Response Modelleri, Constants </pre>
